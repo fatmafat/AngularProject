@@ -1,0 +1,59 @@
+<div class="form-container">
+    <h2>Inscription à la Salle de Sport</h2>
+    
+    <form [formGroup]="inscriptionForm" (ngSubmit)="onSubmit()">
+      
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Nom</mat-label>
+        <input matInput formControlName="nom" placeholder="Entrez votre nom">
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Prénom</mat-label>
+        <input matInput formControlName="prenom" placeholder="Entrez votre prénom">
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" placeholder="Entrez votre email">
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Téléphone</mat-label>
+        <input matInput type="tel" formControlName="telephone" placeholder="Entrez votre numéro">
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Type d'abonnement</mat-label>
+        <mat-select formControlName="abonnement">
+          <mat-option value="mensuel">Mensuel</mat-option>
+          <mat-option value="trimestriel">Trimestriel</mat-option>
+          <mat-option value="annuel">Annuel</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Correction de la section Genre -->
+      <div class="radio-group full-width">
+        <label>Genre :</label>
+        <mat-radio-group formControlName="genre">
+          <mat-radio-button value="homme">Homme</mat-radio-button>
+          <mat-radio-button value="femme">Femme</mat-radio-button>
+          <mat-radio-button value="autre">Autre</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <!-- Correction de la section Conditions -->
+      <div class="checkbox-container full-width">
+        <mat-checkbox formControlName="conditions">
+          J'accepte les conditions générales
+        </mat-checkbox>
+      </div>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="inscriptionForm.invalid">
+        S'inscrire
+      </button>
+
+    </form>
+</div>
+
+  

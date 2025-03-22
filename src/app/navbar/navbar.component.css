@@ -1,0 +1,65 @@
+/* Navbar transparente avec effet de flou */
+.navbar {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3); /* Transparence sur fond noir */
+  backdrop-filter: blur(10px); /* Effet de flou */
+  transition: background 0.3s ease-in-out;
+}
+
+/* Effet quand l'utilisateur scroll */
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.7); /* Rendre plus opaque au scroll */
+}
+
+/* Style du logo */
+.navbar .logo {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navbar .logo span {
+  color: #0073ff; /* Bleu pour "Gym" */
+}
+
+/* Style des liens de navigation */
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links li {
+  display: inline;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.navbar .nav-links a:hover {
+  color: #0073ffc0; /* Bleu au survol */
+  text-decoration: underline;
+  transform: scale(1.1); /* Effet zoom léger */
+}
+
+/* Style du lien actif */
+.navbar .nav-links .active {
+  color: #0073ffc0;
+  border-bottom: 2px solid #0073ffc0;
+}

@@ -1,0 +1,10 @@
+body {
+    background-image: url('/assets/ph1.jpg'); /* Assurez-vous que l'image est bien dans assets */
+    background-size: cover;  /* Couvre toute la page */
+    background-position: center; /* Centre l'image */
+    background-attachment: fixed; /* Garde l'image fixe en scrollant */
+    background-repeat: no-repeat; /* Empêche la répétition */
+}
+
+
+   

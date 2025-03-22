@@ -1,0 +1,30 @@
+<body>
+<h2 class="text-center mt-4">Planning des Cours</h2>
+<div class="container mt-3">
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped text-center">
+      <thead class="thead-dark">
+        <tr>
+          <th>Lundi</th>
+          <th>Mardi</th>
+          <th>Mercredi</th>
+          <th>Jeudi</th>
+          <th>Vendredi</th>
+          <th>Samedi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of [0,1,2,3,4,5] let k =index" >
+          <td *ngFor="let day of planning[i]?.cours">
+            <div class="p-2">
+              <strong>{{ day.nom }}</strong> <br />
+              <span class="text-muted">{{ day.heure }}</span> <br />
+              <span class="text-muted">Places : {{ day.places }}</span> <br />
+              <button class="btn btn-success btn-sm mt-2" (click)="ResPlaces(k)">Réserver</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div></body>

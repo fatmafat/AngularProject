@@ -1,0 +1,39 @@
+/* Espacement sous la navbar */
+.form-container {
+    max-width: 600px; /* Largeur du formulaire */
+    margin: 80px auto 50px; /* Centrage + espace sous navbar */
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    border-radius: 10px;
+}
+
+/* Centrage du titre */
+.form-container h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Style pour les champs du formulaire */
+mat-form-field {
+    width: 100%; /* Prend toute la largeur du formulaire */
+}
+
+/* Style des boutons radio et checkbox */
+.radio-group, .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.radio-group mat-radio-button {
+    margin-right: 10px;
+}
+
+/* Ajustement du bouton */
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}

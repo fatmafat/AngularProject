@@ -1,0 +1,59 @@
+/* footer.component.css */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    margin-top: auto; /* Pour pousser le footer en bas de la page */
+  }
+  
+  .footer h5 {
+    color: #ffcc00;
+    margin-bottom: 20px;
+  }
+  
+  .footer p,
+  .footer ul {
+    color: #ccc;
+  }
+  
+  .footer ul {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer ul li a:hover {
+    color: #ffcc00;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    color: #ccc;
+    margin-right: 15px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #ffcc00;
+  }
+  
+  hr {
+    border-color: #555;
+  }
+  
+  .text-center p {
+    margin: 0;
+  }

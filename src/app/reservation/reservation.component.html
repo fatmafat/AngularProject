@@ -1,0 +1,27 @@
+<form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
+    <label>
+      Nom:
+      <input type="text" formControlName="nom" />
+    </label>
+    <div *ngIf="reservationForm.get('nom')?.invalid && reservationForm.get('nom')?.touched">
+      Nom est requis.
+    </div>
+  
+    <label>
+      Prénom:
+      <input type="text" formControlName="prenom" />
+    </label>
+    <div *ngIf="reservationForm.get('prenom')?.invalid && reservationForm.get('prenom')?.touched">
+      Prénom est requis.
+    </div>
+  
+    <label>
+      CIN:
+      <input type="text" formControlName="cin" />
+    </label>
+    <div *ngIf="reservationForm.get('cin')?.invalid && reservationForm.get('cin')?.touched">
+      CIN invalide (ex: 8 caractères alphanumériques).
+    </div>
+  
+    <button type="submit">Envoyer</button>
+  </form>

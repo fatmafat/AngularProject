@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 " *ngFor="let tar of tarifs">
+            <div class="card shadow-sm">
+                <img [src]="tar.img" class="card-img-top" alt="{{tar.title}}">
+                <div class="card-body">
+                    <h5 class="card title fw-bold">{{tar.title}}</h5>
+                    <span class="badge bg-danger p-2 fs-6">{{tar.price}}</span>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
