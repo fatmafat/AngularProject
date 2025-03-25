@@ -1,0 +1,30 @@
+
+<body>
+<div class="auth-container" [class.register-mode]="isRegister">
+ 
+    <div class="form-container">
+      <!-- Login Form -->
+      <form class="form login-form" *ngIf="!isRegister" (ngSubmit)="onLogin()">
+        <h2>Login</h2>
+        <input type="email" placeholder="Email" [(ngModel)]="loginData.email" name="loginEmail" required>
+        <input type="password" placeholder="Password" [(ngModel)]="loginData.password" name="loginPassword" required>
+        <button type="submit">Login</button>
+        <p (click)="toggleMode()">Pas encore inscrit ?</p>
+      </form>
+  
+      <!-- Register Form -->
+      <form class="form register-form" *ngIf="isRegister" (ngSubmit)="onRegister()">
+        <h2>Register</h2>
+        <input type="text" placeholder="Name" [(ngModel)]="registerData.name" name="registerName" required>
+        <input type="email" placeholder="Email" [(ngModel)]="registerData.email" name="registerEmail" required>
+        <input type="password" placeholder="Password" [(ngModel)]="registerData.password" name="registerPassword" required>
+        <select [(ngModel)]="registerData.role" name="registerRole">
+          <option value="CLIENT">Client</option>
+          <option value="COACH">Coach</option>
+        </select>
+        <button type="submit">Register</button>
+        <p (click)="toggleMode()">Déjà inscrit ? Se connecter</p>
+      </form>
+    </div>
+  </div>
+</body>  

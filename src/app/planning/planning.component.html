@@ -14,16 +14,18 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let i of [0,1,2,3,4,5] let k =index" >
-          <td *ngFor="let day of planning[i]?.cours">
+        <tr *ngFor="let row of planning; let i = index">
+          <td *ngFor="let day of row.cours; let j = index">
+        
             <div class="p-2">
               <strong>{{ day.nom }}</strong> <br />
               <span class="text-muted">{{ day.heure }}</span> <br />
               <span class="text-muted">Places : {{ day.places }}</span> <br />
-              <button class="btn btn-success btn-sm mt-2" (click)="ResPlaces(k)">Réserver</button>
+              <button class="btn btn-success btn-sm mt-2" (click)="ResPlaces(i, j)">Réserver</button>
             </div>
           </td>
         </tr>
+        
       </tbody>
     </table>
   </div>

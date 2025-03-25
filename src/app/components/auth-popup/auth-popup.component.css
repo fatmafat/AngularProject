@@ -1,0 +1,56 @@
+.auth-container {
+    width: 400px;
+    padding: 40px;
+    margin: 50px 600px ;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  input, select, button {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  p {
+    text-align: center;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .auth-container.register-mode .login-form {
+    display: none;
+  }
+  
+  .auth-container:not(.register-mode) .register-form {
+    display: none;
+  }
+
+  /* Fond d'écran */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/assets/ph1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  

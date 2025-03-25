@@ -8,6 +8,8 @@ import { SignupComponent } from './signup/signup.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { TarifsComponent } from './tarifs/tarifs.component';
+import { CoachComponent } from './coach/coach.component';
+import { AuthPopupComponent } from './components/auth-popup/auth-popup.component';
 const routes: Routes = [
   {path:'',component:AcceuillComponent},
   {path:"classes",component:ClassesComponent},
@@ -16,8 +18,10 @@ const routes: Routes = [
   {path:"signup",component:SignupComponent},
   {path:"navbar",component:NavbarComponent},
   {path:"tarif",component:TarifsComponent},
-  {path:"coach",component:NavbarComponent},
+  {path:"coach",component:CoachComponent},
   {path:"res",component:ReservationComponent},
+  {path:"auth",component:AuthPopupComponent}
+
 
 ];
 

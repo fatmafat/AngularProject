@@ -1,1 +1,10 @@
-<p>coach works!</p>
+
+<div class="coach-container">
+  <div class="coach-card" *ngFor="let coach of coachs">
+    <img [src]="coach.image" alt="Coach" class="coach-img">
+    <div class="coach-info">
+      <h3>{{ coach.prenom }} {{ coach.nom }}</h3>
+      <p>Spécialité : {{ coach.specialite }}</p>
+    </div>
+  </div>
+</div>

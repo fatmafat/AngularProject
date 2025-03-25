@@ -1,11 +1,19 @@
-<nav class="navbar"> <!-- -->
+<nav class="navbar">
   <div class="logo">MY FITNESS <span>Gym</span></div>
   <ul class="nav-links">
+    <!-- Si connecté : afficher tous les liens sauf SIGN UP -->
+    <ng-container *ngIf="authService.isLoggedIn(); else loginBlock">
       <li><a routerLink="/" class="active">Accueil</a></li>
       <li><a routerLink="/planning">Planning</a></li>
       <li><a routerLink="/res">Tarifs</a></li>
       <li><a routerLink="/coach">Coach</a></li>
       <li><a routerLink="/contact">Contact</a></li>
-      <li><a routerLink="/signup">SIGN UP</a></li>
+      <li (click)="logout()" style="cursor: pointer;">Déconnexion</li>
+    </ng-container>
+
+    <!-- Si non connecté : afficher juste "Connexion" -->
+    <ng-template #loginBlock>
+      <li><a routerLink="/auth">Connexion</a></li>
+    </ng-template>
   </ul>
 </nav>

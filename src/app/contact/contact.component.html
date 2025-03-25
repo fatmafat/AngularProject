@@ -1,1 +1,19 @@
-<p>contact works!</p>
+<body>
+<!-- Bouton pour ouvrir le popup -->
+<div class="center-container">
+<button class="open-btn" (click)="openPopup()">Contacter</button>
+</div>
+<!-- Fenêtre modale -->
+<div class="modal" [ngClass]="{ 'show': showModal }">
+  <div class="modal-content">
+    <span class="close" (click)="closePopup()">&times;</span>
+    <h2>Envoyer un message</h2>
+    <form (submit)="sendMessage()">
+      <input type="text" placeholder="Votre nom" [(ngModel)]="name" name="name" required />
+      <input type="email" placeholder="Votre email" [(ngModel)]="email" name="email" required />
+      <textarea placeholder="Votre message" [(ngModel)]="message" name="message" rows="5" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+</div>
+</body>
